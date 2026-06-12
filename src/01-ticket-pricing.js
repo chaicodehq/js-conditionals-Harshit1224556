@@ -15,8 +15,8 @@
  *   - Add $3 on weekends (when isWeekend is true)
  *
  * Rules:
- *   - If age is negative or not a number, return -1
- *   - isWeekend is a boolean
+ *   - isWeekend is a booleanIf age is negative or not a number, return -1
+ *   - 
  *
  * @param {number} age - The customer's age
  * @param {boolean} isWeekend - Whether it's a weekend
@@ -24,4 +24,21 @@
  */
 export function getTicketPrice(age, isWeekend) {
   // Your code here
+          let score  = 0;
+     if(isWeekend) score+=3;
+
+if (typeof age !== "number" || Number.isNaN(age) || age < 0) {
+    return -1;
+}
+
+      if(age>=0 && age<=12) score+=8
+      else if(age>=13 && age<=17) score+=12
+      else if(age>=18 && age<=59) score+=15
+      else score+=10
+
+      return score
+
+
+
+     
 }
